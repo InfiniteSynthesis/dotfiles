@@ -8,13 +8,8 @@ set nocompatible
 set history=500
 
 " Enable filetype plugins
-filetype on
 filetype plugin on
 filetype indent on
-
-" Set to auto read when a file is changed from the outside
-set autoread
-au FocusGained,BufEnter * checktime
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
@@ -23,21 +18,19 @@ let mapleader = ","
 " Fast saving
 nmap <leader>w :w!<cr>
 
-" :W sudo saves the file
-" (useful for handling the permission-denied error)
+" :W sudo saves the file (useful for handling the permission-denied error)
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
-" Proper backspace behavior.
-set backspace=indent,eol,start
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set background=light
+
 " Add numbers to each line on the left-hand side.
 set number
 
 " Enable auto completion menu after pressing TAB.
-set wildmenu
 set wildmode=list:longest
 set wildignore+=*/.git/*,*/.DS_Store
 
@@ -51,7 +44,7 @@ set noshowmode
 set colorcolumn=80
 
 " modern search
-set ignorecase smartcase showmatch hlsearch incsearch
+set ignorecase smartcase showmatch
 
 " Don't redraw while executing macros (good performance config)
 set lazyredraw
@@ -62,8 +55,6 @@ set novisualbell
 set t_vb=
 set tm=500
 
-" Always show status line
-set laststatus=2
 
 " Add a bit extra margin to the left
 " set foldcolumn=1
@@ -72,14 +63,10 @@ set laststatus=2
 set modeline
 set modelines=4
 
-set showcmd
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set encoding=utf-8
-
 " 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
@@ -105,13 +92,13 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-
+" set background=light
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin()
 
-	Plug 'mhinz/vim-startify'                         " Start screen
+	Plug 'mhinz/vim-startify'
 	Plug 'preservim/nerdtree' |
 		\ Plug 'Xuyuanp/nerdtree-git-plugin'
 	Plug 'tpope/vim-commentary'                       " Code Comment
@@ -217,9 +204,6 @@ endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Turn syntax highlighting on.
-syntax on
-
 " Enable true color.
 let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
