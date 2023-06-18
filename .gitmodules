@@ -1,0 +1,3 @@
+[submodule "nvim/K-Snippets"]
+	path = nvim/K-Snippets
+	url = git@github.com:InfiniteSynthesis/K-Snippets.git

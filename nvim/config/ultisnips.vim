@@ -1,6 +1,9 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Ultisnips
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set snippet directory
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "K-Snippets"]
+
 " UltiSnipsEdit open in horizontal window
 let g:UltiSnipsEditSplit="horizontal"
 
