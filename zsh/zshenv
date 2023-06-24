@@ -1,0 +1,52 @@
+#!/usr/bin/env zsh
+
+export WORKSPACE="$HOME/Workspace"
+export DOTFILES="$WORKSPACE/dotfiles"
+
+# XDG
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_CACHE_HOME=$HOME/.cache
+
+# editor
+export EDITOR="nvim"
+export VISUAL="nvim"
+
+# zsh
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export HISTFILE="$ZDOTDIR/.zhistory"    # History filepath
+export HISTSIZE=5000                   # Maximum events for internal history
+export SAVEHIST=5000                   # Maximum events in history file
+
+# other software
+export VIMCONFIG="$XDG_CONFIG_HOME/nvim"
+export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
+
+# Man pages
+export MANPAGER='nvim +Man!'
+
+# fzf
+FZF_COLORS="bg+:-1,\
+fg:gray,\
+fg+:black,\
+border:black,\
+spinner:0,\
+hl:yellow,\
+header:blue,\
+info:green,\
+pointer:red,\
+marker:blue,\
+prompt:gray,\
+hl+:red"
+
+export FZF_DEFAULT_OPTS="--height 60% \
+--border sharp \
+--layout reverse \
+--color '$FZF_COLORS' \
+--prompt '∷ ' \
+--pointer ▶ \
+--marker ⇒"
+
+export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -n 10'"
+
+export NVM_DIR="$XDG_CONFIG_HOME/nvm"
