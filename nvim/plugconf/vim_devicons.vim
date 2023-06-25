@@ -1,6 +1,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim-devicons
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 let g:webdevicons_enable = 1
 let g:WebDevIconsOS = 'Darwin'
 let g:webdevicons_enable_nerdtree = 1
