@@ -24,3 +24,13 @@ alias gd='git diff'
 # ls
 alias ls='ls --color=tty'
 alias ll='ls -lahF'
+
+# vim
+alias vim=nvim
+alias vi=nvim
+
+# zathura
+# Use x11 if run in wsl
+if [[ $(grep -i icrosoft /proc/version) ]]; then
+	alias zathura='GDK_BACKEND=x11 /usr/bin/zathura'
+fi

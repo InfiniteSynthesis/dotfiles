@@ -1,0 +1,90 @@
+[alias]
+	l = log --graph
+
+	s = status
+
+	# Show verbose output about tags, branches or remotes
+	branches = branch --all
+	remotes = remote --verbose
+
+	# list files which have changed
+    files = diff --stat
+
+	# Find commits by commit message
+	fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
+
+	# Remove branches that have already been merged with main.
+	# a.k.a. ‘delete merged’
+	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+
+	# List contributors with number of commits.
+	contributors = shortlog --summary --numbered
+
+
+[color]
+	ui = true
+
+
+[core]
+	editor = nvim
+
+	pager = ~/.config/git/diff-so-fancy/diff-so-fancy | less --tabs=4 -RFX
+
+	excludesfile = ~/.config/git/ignore
+
+	# Make `git rebase` safer on macOS.
+	trustctime = false
+
+
+[color "diff-highlight"]
+	oldNormal = red bold
+
+	oldHighlight = bright red bold 52
+
+	newNormal = green bold
+
+	newHighlight = bright green bold 22
+
+
+[color "diff"]
+	meta = 11
+
+	frag = magenta bold
+
+	commit = cyan bold
+
+	old = red bold
+
+	new = green bold
+
+	whitespace = red reverse
+
+
+[color "status"]
+	added = green
+
+	changed = yellow
+
+	untracked = cyan
+
+
+[diff]
+	tool=nvimdiff
+
+
+[diff-so-fancy]
+	markEmptyLines = false
+	changeHunkIndicators = false
+	rulerWidth = 80
+
+
+[include]
+	path = ~/.config/git/user-config
+
+
+[interactive]
+	diffFilter = diff-so-fancy --patch
+
+
+[log]
+	showSignature=true
