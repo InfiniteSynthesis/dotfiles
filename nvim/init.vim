@@ -23,6 +23,7 @@ call plug#begin()
 	Plug 'pangloss/vim-javascript'
 	Plug 'leafgarland/typescript-vim'
 	Plug 'MaxMEllon/vim-jsx-pretty'
+	Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
 call plug#end()
 
