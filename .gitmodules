@@ -10,3 +10,7 @@
 [submodule "git/diff-so-fancy"]
 	path = git/diff-so-fancy
 	url = https://github.com/so-fancy/diff-so-fancy.git
+[submodule "qbittorrent/VueTorrent"]
+	path = qbittorrent/VueTorrent
+	url = https://github.com/WDaan/VueTorrent.git
+	branch = latest-release
