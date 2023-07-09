@@ -3,7 +3,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Light background
-set background=light
+set background=dark
 
 " Add numbers
 set number

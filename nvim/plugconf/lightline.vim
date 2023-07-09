@@ -3,7 +3,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:lightline = {
-	\ 'colorscheme': 'one',
+	\ 'colorscheme': 'gruvbox',
 	\ 'tabline_separator': { 'left': "", 'right': "" },
 	\ 'tabline_subseparator': { 'left': "", 'right': "" },
 	\ 'separator': { 'left': "", 'right': "" },
