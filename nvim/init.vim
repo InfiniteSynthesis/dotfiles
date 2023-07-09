@@ -12,6 +12,7 @@ call plug#begin()
 	Plug 'itchyny/lightline.vim'                      " Statusbar
 	Plug 'psliwka/vim-smoothie'                       " Smooth scroll
 	Plug 'ryanoasis/vim-devicons'                     " Nerd font icons
+	Plug 'christoomey/vim-tmux-navigator'             " tmux navigator
 	" Theme
 	Plug 'morhetz/gruvbox'
 	" Formatter

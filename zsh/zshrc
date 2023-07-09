@@ -50,3 +50,10 @@ source $DOTFILES/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Customize prompt - p10k
 [[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
+
+# tmux
+tmux-window-name() {
+	(${XDG_CONFIG_HOME}/tmux/plugins/tmux-window-name/scripts/rename_session_windows.py &)
+}
+
+add-zsh-hook chpwd tmux-window-name
