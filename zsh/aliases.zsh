@@ -31,6 +31,8 @@ alias vi=nvim
 
 # zathura
 # Use x11 if run in wsl
-if [[ $(grep -i icrosoft /proc/version) ]]; then
-	alias zathura='GDK_BACKEND=x11 /usr/bin/zathura'
+if [ -f "/proc/version" ]; then
+	if [[ $(grep -i icrosoft /proc/version) ]]; then
+		alias zathura='GDK_BACKEND=x11 /usr/bin/zathura'
+	fi
 fi
