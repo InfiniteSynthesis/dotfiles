@@ -39,5 +39,4 @@ let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
 set termguicolors
 
 " Set colortheme
-let g:gruvbox_italic = 1
-colorscheme gruvbox
+colorscheme tokyonight-night

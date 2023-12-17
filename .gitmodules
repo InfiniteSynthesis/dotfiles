@@ -17,12 +17,12 @@
 [submodule "tmux/tpm"]
 	path = tmux/tpm
 	url = https://github.com/tmux-plugins/tpm.git
-[submodule "tmux/tmux-gruvbox"]
-	path = tmux/tmux-gruvbox
-	url = https://github.com/egel/tmux-gruvbox.git
 [submodule "tmux/tmux-window-name"]
 	path = tmux/tmux-window-name
 	url = https://github.com/ofirgall/tmux-window-name.git
 [submodule "tmux/extrakto"]
 	path = tmux/extrakto
 	url = https://github.com/laktak/extrakto.git
+[submodule "tmux/tmux-tokyo-night"]
+	path = tmux/tmux-tokyo-night
+	url = https://github.com/InfiniteSynthesis/tmux-tokyo-night
