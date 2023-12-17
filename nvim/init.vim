@@ -14,7 +14,7 @@ call plug#begin()
 	Plug 'ryanoasis/vim-devicons'                     " Nerd font icons
 	Plug 'christoomey/vim-tmux-navigator'             " tmux navigator
 	" Theme
-	Plug 'morhetz/gruvbox'
+	Plug 'folke/tokyonight.nvim'
 	" Formatter
 	Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 	" Language
