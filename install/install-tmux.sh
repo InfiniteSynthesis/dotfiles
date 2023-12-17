@@ -4,9 +4,9 @@ mkdir -p "$XDG_CONFIG_HOME/tmux/plugins"
 
 ln -sf "$DOTFILES/tmux/tmux.conf" "$XDG_CONFIG_HOME/tmux"
 
-if [ -d "$DOTFILES/tmux/tmux-gruvbox" ]
+if [ -d "$DOTFILES/tmux/tmux-tokyo-night" ]
 then
-	ln -sf "$DOTFILES/tmux/tmux-gruvbox" "$XDG_CONFIG_HOME/tmux/plugins"
+	ln -sf "$DOTFILES/tmux/tmux-tokyo-night" "$XDG_CONFIG_HOME/tmux/plugins"
 fi
 
 if [ -d "$DOTFILES/tmux/tmux-window-name" ]
