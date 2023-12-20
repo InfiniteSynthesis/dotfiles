@@ -84,6 +84,7 @@ Here is the complete list of dependencies.
      # uncomment this to use "Network interface" and/or "Optional IP address to bind to" options
      # without this binding will fail and qBittorrent's traffic will go through the default route
      # AmbientCapabilities=CAP_NET_RAW
+     # Environment="DBUS_SESSION_BUS_ADDRESS={RESULT OF ECHO DBUS_SESSION_BUS_ADDRESS}"
 
      [Install]
      WantedBy=multi-user.target
@@ -91,6 +92,14 @@ Here is the complete list of dependencies.
 
   1. Enable it to start up on boot `sudo systemctl enable qbittorrent`.
 
+- Set `qbittorrent-nox` Web UI as [`VueTorrent`](https://github.com/WDaan/VueTorrent). In "Settings - WebUI", tick "Use alternative WebUI" and set "File location" as `$DOTFILES/qbittorrent/VueTorrent` (Absolute path is needed).
+
+- Enable system notification when a task is finished in `qbittorrent-nox`.
+
+  1. Uncomment `Environment="DBUS_SESSION_BUS_ADDRESS={RESULT OF ECHO DBUS_SESSION_BUS_ADDRESS}` in `/etc/systemd/system/qbittorrent.service` and replace the value with `echo $DBUS_SESSION_BUS_ADDRESS`.
+
+  1. In "Settings - Downloads", tick "Run external program on torrent finished:" and set "Command" as `$DOTFILES/qbittorrent/on-completion.sh "%N"` (Absolute path is needed).
+
 ## Feedback
 
-Suggestions /improvements [welcome](https://github.com/InfiniteSynthesis/dotfiles/issues)!
+Suggestions / improvements are [welcome](https://github.com/InfiniteSynthesis/dotfiles/issues)!
