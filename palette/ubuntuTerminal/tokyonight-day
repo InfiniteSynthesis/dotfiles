@@ -1,0 +1,14 @@
+[/]
+background-color='rgb(225,226,231)'
+bold-color-same-as-fg=true
+bold-is-bright=true
+cursor-background-color='rgb(55,96,191)'
+cursor-colors-set=true
+cursor-foreground-color='rgb(55,96,191)'
+foreground-color='rgb(55,96,191)'
+highlight-background-color='rgb(45,63,118)'
+highlight-colors-set=false
+palette=['rgb(233,233,237)', 'rgb(245,42,101)', 'rgb(88,117,57)', 'rgb(140,108,62)', 'rgb(46,125,233)', 'rgb(152,84,241)', 'rgb(0,113,151)', 'rgb(97,114,176)', 'rgb(161,166,197)', 'rgb(245,42,101)', 'rgb(88,117,57)', 'rgb(140,108,62)', 'rgb(46,125,233)', 'rgb(252,167,234)', 'rgb(0,113,151)', 'rgb(55,96,191)']
+use-theme-colors=false
+use-theme-transparency=true
+visible-name='tokyonight-day'

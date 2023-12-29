@@ -1,0 +1,14 @@
+[/]
+background-color='rgb(34,36,54)'
+bold-color-same-as-fg=true
+bold-is-bright=true
+cursor-background-color='rgb(200,211,245)'
+cursor-colors-set=true
+cursor-foreground-color='rgb(200,211,245)'
+foreground-color='rgb(200,211,245)'
+highlight-background-color='rgb(45,63,118)'
+highlight-colors-set=false
+palette=['rgb(27,29,43)', 'rgb(255,117,127)', 'rgb(195,232,141)', 'rgb(255,199,119)', 'rgb(130,170,255)', 'rgb(192,153,255)', 'rgb(134,225,252)', 'rgb(130,139,184)', 'rgb(68,74,115)', 'rgb(255,117,127)', 'rgb(195,232,141)', 'rgb(255,199,119)', 'rgb(130,170,255)', 'rgb(252,167,234)', 'rgb(134,225,252)', 'rgb(200,211,245)']
+use-theme-colors=false
+use-theme-transparency=true
+visible-name='tokyonight-moon'
