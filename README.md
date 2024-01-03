@@ -1,6 +1,6 @@
 # Kanade's dotfiles
 
-## Overview
+## Dependencies
 
 Here is the complete list of dependencies.
 
@@ -8,7 +8,6 @@ Here is the complete list of dependencies.
 - [zsh](https://www.zsh.org/) / [powerlevel10k](https://github.com/romkatv/powerlevel10k)
 - [Neovim](https://neovim.io/) / [vim-plug](https://github.com/junegunn/vim-plug)
 - [tmux](https://github.com/tmux/tmux/wiki) / [fzf](https://github.com/junegunn/fzf)
-- [qbittorrent-nox](https://github.com/qbittorrent/qBittorrent)
 - [nvm](https://github.com/nvm-sh/nvm) / [node](https://nodejs.org) / [npm](https://www.npmjs.com/) / [yarn](https://classic.yarnpkg.com)
 - [openvpn](https://github.com/OpenVPN/openvpn)
 
@@ -20,7 +19,7 @@ Here is the complete list of dependencies.
 > This installation instruction is for clean install only.
 > Use at your own risk.
 
-1. Install `git`, `zsh` and a nerd font (e.g., [MesloLGS NF](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k) from powerlevel10k).
+1. Install `git`, `zsh` and a nerd font (e.g., [MesloLGS NF](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k)).
 
 1. Download this repository in `$HOME/Workspace` and initialize submodules.
 
@@ -32,15 +31,15 @@ Here is the complete list of dependencies.
    git submodule update --init --recursive
    ```
 
+1. Setup `git` user information by copying `git/user-config.exmaple` and renaming it as `git/user-config`. Update `email`, `name` and `signingkey` if needed.
+
+1. Run package installation script `./install.sh`.
+
 1. Set `zsh` as default shell and relaunch terminal. Then setup `powerlevel10k` theme.
 
    ```shell
    chsh -s $(which zsh)
    ```
-
-1. Setup `git` user information by copying `git/user-config.exmaple` and renaming it as `git/user-config`. Update `email`, `name` and `signingkey` if needed.
-
-1. Run package installation script `./install-packages.sh`.
 
 1. Install [`nvm`](https://github.com/nvm-sh/nvm), [`node`](https://nodejs.org/en), [`npm`](https://www.npmjs.com/) and [`yarn`](https://classic.yarnpkg.com).
 
@@ -51,7 +50,7 @@ Here is the complete list of dependencies.
 
 ## Optionall Installation
 
-- Run optional package installation script `./install-optional.sh`. This will install `sigil`, `virtualbox`.
+- Run optional package installation script in `install/package`. This will install `qbittorrent-nox`, `sigil` and `virtualbox`.
 
 - Install [`Anime4K`](https://github.com/bloc97/Anime4K) shaders for `mpv`.
 
