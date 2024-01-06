@@ -34,6 +34,9 @@ source $DOTFILES/zsh/aliases.zsh
 # Completion
 source $DOTFILES/zsh/completion.zsh
 
+# Scripts
+source $DOTFILES/zsh/scripts.zsh
+
 # fzf
 if [ $(command -v "fzf") ]; then
     source $DOTFILES/zsh/fzf.zsh
