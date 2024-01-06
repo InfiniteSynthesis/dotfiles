@@ -12,12 +12,12 @@ echo -e "${BoldRed}
 |______________________________________________________________________________|
 "
 
-echo -en "${Yellow} ${Default}Do you want to proceed? (Y/n)$"
+echo -en "${Yellow} ${DefaultColor}Do you want to proceed? (Y/n)"
 read yn
 
 case $yn in
 	y|Y|yes|Yes|YES|"" ) ;;
-	* ) echo -e "${Green}󰇵 ${Default}Exiting..."; exit;;
+	* ) echo -e "${Green}󰇵 ${DefaultColor}Exiting..."; exit;;
 esac
 
 ###########
@@ -25,11 +25,14 @@ esac
 ###########
 
 function dot_install() {
-    echo -e "${LightMagenta} Installing ${Green}${1} ${LightMagenta}config${Default}"
+    sleep .2s
+    echo
     . "$DOTFILES/install/config/install-${1}.sh"
+    echo -e "${LightGreen} ${LightMagenta}${1} ${LightGreen}config has been installed.${DefaultColor}"
 }
 
 dot_install zsh
+dot_install fonts
 dot_install curl
 dot_install git
 dot_install mpv
