@@ -1,26 +1,34 @@
 #!/usr/bin/env zsh
 
-export WORKSPACE="$HOME/Workspace"
-export DOTFILES="$WORKSPACE/dotfiles"
+export WORKSPACE="${HOME}/Workspace"
+export DOTFILES="${WORKSPACE}/dotfiles"
 
 # XDG
-export XDG_CONFIG_HOME=$HOME/.config
-export XDG_DATA_HOME=$HOME/.local/share
-export XDG_CACHE_HOME=$HOME/.cache
+unameOut="$(uname -s)"
+case "${unameOut}" in
+	Darwin*)
+	export XDG_CONFIG_HOME="${HOME}/Library/Application Support"
+	export XDG_DATA_HOME="${HOME}/Library"
+	export XDG_CACHE_HOME="${HOME}/Library/Caches";;
+	*)
+	export XDG_CONFIG_HOME="${HOME}/.config"
+	export XDG_DATA_HOME="${HOME}/.local/share"
+	export XDG_CACHE_HOME="${HOME}/.cache";;
+esac
 
 # editor
 export EDITOR="nvim"
 export VISUAL="nvim"
 
 # zsh
-export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-export HISTFILE="$ZDOTDIR/.zhistory"    # History filepath
-export HISTSIZE=5000                   # Maximum events for internal history
-export SAVEHIST=5000                   # Maximum events in history file
+export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
+export HISTFILE="${ZDOTDIR}/.zhistory"
+export HISTSIZE=5000
+export SAVEHIST=5000
 
 # other software
-export VIMCONFIG="$XDG_CONFIG_HOME/nvim"
-export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
+export VIMCONFIG="${XDG_CONFIG_HOME}/nvim"
+export CUDA_CACHE_PATH="${XDG_CACHE_HOME}/nv"
 
 # Man pages
 export MANPAGER='nvim +Man!'
@@ -49,4 +57,4 @@ export FZF_DEFAULT_OPTS="--height 60% \
 
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -n 10'"
 
-export NVM_DIR="$XDG_CONFIG_HOME/nvm"
+export NVM_DIR="${XDG_CONFIG_HOME}/nvm"

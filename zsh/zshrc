@@ -40,16 +40,16 @@ if [ $(command -v "fzf") ]; then
 fi
 
 # Node
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "${NVM_DIR}/nvm.sh" ] && \. "${NVM_DIR}/nvm.sh"
 
 # GPG
 export GPG_TTY=$(tty)
 
 # Syntax Highlighting
-source $DOTFILES/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ${DOTFILES}/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Customize prompt - p10k
-[[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
+[[ ! -f ${ZDOTDIR}/.p10k.zsh ]] || source ${ZDOTDIR}/.p10k.zsh
 
 # tmux
 tmux-window-name() {

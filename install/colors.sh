@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-Default="\e[0m"
+DefaultColor="\e[0m"
 Black="\e[30m"
 Red="\e[31m"
 Green="\e[32m"
