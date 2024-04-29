@@ -1,4 +1,4 @@
-# Kanade's dotfiles
+# k-dotfiles
 
 ## Dependencies
 
@@ -13,8 +13,7 @@ Here is the complete list of dependencies.
 
 ## Installation
 
-> **Warning:**
->
+> [!WARNING]
 > There is **NO** backup system.
 > This installation instruction is for clean install only.
 > Use at your own risk.
